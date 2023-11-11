@@ -3,7 +3,6 @@ AgroAID é uma API FullWeb desenvolvida em Java com o framework Spring. Esta pla
 
 <h3 align="center">Link API Key Chat GPT: https://platform.openai.com/account/api-keys</h3>
 <h3 align="center">Link API Clima: https://home.openweathermap.org/api_keys</h3>
-<h3 align="center">Link Para o Gerador de Pessoas do 4Devs:https://www.4devs.com.br/gerador_de_pessoas</h3>
 
 # 🌾 AgroAID: A Plataforma Inteligente para Agricultura Sustentável 🚜
 
