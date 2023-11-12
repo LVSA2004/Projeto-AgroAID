@@ -1,3 +1,13 @@
+<h2 align="center">Link do vídeo do teste da API: https://youtu.be/LHxeuSyfUtE</h2>
+<h2 align="center">Link API Key Chat GPT: https://platform.openai.com/account/api-keys</h2>
+<h2 align="center">Link API Clima: https://home.openweathermap.org/api_keys</h2>
+
+
+<h2 align="center">🛠 Arquitetura do Projeto 🛠</h2>
+<div align="center">
+    <img height src="https://cdn.discordapp.com/attachments/945808741385793596/1173013075255902280/Mapa_Mental_com_brainstorm_escrito_a_mao_colorido_1.png?ex=6562688e&is=654ff38e&hm=03dad3f96c25cb3123c0fbdbbae0b8c9a71d957efba275af006151ce9024b047&"/>
+</div>
+
 # Projeto-AgroAID
 AgroAID é uma API FullWeb desenvolvida em Java com o framework Spring. Esta plataforma online utiliza IA para oferecer dicas de plantio e assistência no cuidado de plantações. Além disso, integra uma API de clima para capacitar agricultores a antecipar e se adaptar às mudanças climáticas.
 
@@ -18,13 +28,3 @@ Acesse informações meteorológicas em tempo real e previsões detalhadas diret
 
 ### Plataforma 100% Online 💻
 Com acesso remoto a todas as funcionalidades, o AgroAID proporciona conveniência e flexibilidade. Gerencie suas plantações de qualquer lugar, a qualquer momento.
-
-<h3 align="center">Link do vídeo do teste da API: https://youtu.be/LHxeuSyfUtE</h3>
-<h3 align="center">Link API Key Chat GPT: https://platform.openai.com/account/api-keys</h3>
-<h3 align="center">Link API Clima: https://home.openweathermap.org/api_keys</h3>
-
-
-<h2 align="center">🛠 Arquitetura do Projeto 🛠</h2>
-<div align="center">
-    <img height src="https://cdn.discordapp.com/attachments/945808741385793596/1173013075255902280/Mapa_Mental_com_brainstorm_escrito_a_mao_colorido_1.png?ex=6562688e&is=654ff38e&hm=03dad3f96c25cb3123c0fbdbbae0b8c9a71d957efba275af006151ce9024b047&"/>
-</div>
