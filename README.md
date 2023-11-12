@@ -19,8 +19,10 @@ Acesse informações meteorológicas em tempo real e previsões detalhadas diret
 ### Plataforma 100% Online 💻
 Com acesso remoto a todas as funcionalidades, o AgroAID proporciona conveniência e flexibilidade. Gerencie suas plantações de qualquer lugar, a qualquer momento.
 
+<h3 align="center">Link do vídeo do teste da API: https://youtu.be/LHxeuSyfUtE</h3>
 <h3 align="center">Link API Key Chat GPT: https://platform.openai.com/account/api-keys</h3>
 <h3 align="center">Link API Clima: https://home.openweathermap.org/api_keys</h3>
+
 
 <h2 align="center">🛠 Arquitetura do Projeto 🛠</h2>
 <div align="center">
