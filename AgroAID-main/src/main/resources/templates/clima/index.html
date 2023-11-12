@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head th:replace="~{_template::head('Clima')}" >
+  <title>Consulta de Clima</title>
+</head>
+<body>
+    <nav th:replace="~{_template::#navbar}"></nav>
+    <div style="
+            background-color: #343541;
+            margin: 0px;
+            height:100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            "
+    >
+      <div style="
+                width: 1000px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                "
+      >
+
+      
+      <div th:if="${error != null}">
+        <p th:text="${error}" style="color: red;"></p>
+      </div>
+      
+
+      <div class="container"
+            style="overflow-y: scroll;
+                   height: 75vh;"
+      >
+        <div class="row" th:if="${clima != null}" th:each="clima : ${climalist}">
+          <div class="col s12 m12 l6">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title" th:text="${clima.cidade}"></span>
+
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                  <p th:text="${'Temperatura: ' + clima.temperature + '°F'}"></p>
+                  <i class="material-icons">beach_access</i>
+                </div>
+                
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                  <p th:text="${'Humidade: ' + clima.humidity + 'g/m³'}"></p>
+                  <i class="material-icons">cloud</i>
+                </div>
+
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                  <p th:text="${'Máxima: ' + clima.tempMax + '°F'}"></p>
+                  <i class="material-icons">expand_less</i>
+                </div>
+
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                  <p th:text="${'Minima: ' + clima.tempMin + '°F'}"></p>
+                  <i class="material-icons">expand_more</i>
+                </div>
+
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                  <p th:text="${'Velocidade: ' + clima.speed + 'Km/H'}"></p>
+                  <i class="material-icons">fast_forward</i>
+                </div>
+
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                  <p th:text="${'Angulo: ' + clima.degree + '°'}"></p>
+                  <i class="material-icons">filter_tilt_shift</i>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    
+
+      <form class="text-box" th:action="@{/clima}"  method="post" th:object="${clima}">
+          
+        <textarea 
+          placeholder="send message"
+          th:field="*{cidade}" 
+        ></textarea>
+        
+        <button class="btn"><i class="material-icons">send</i>
+        </button>
+    
+      </form>
+
+      
+    <script>
+      const textarea = document.querySelector("textarea");
+      textarea.addEventListener("keyup", e=>{
+        textarea.style.height = `auto` 
+        let scHeight = e.target.scrollHeight;
+        textarea.style.height = `${scHeight}px`   
+         
+      })
+    </script>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.dropdown-trigger');
+      const options = {
+          constrainWidth: false,
+          coverTrigger: false
+      }
+      var instances = M.Dropdown.init(elems, options);
+  });
+</script>
+
+</html>

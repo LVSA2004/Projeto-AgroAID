@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>AgroAID</title>
+</head>
+
+<body>
+    <div style="
+            background-color: #343541;
+            height:100vh;
+            "
+    >
+
+    <nav>
+        <div class="nav-wrapper light-green darken-2">
+            <a href="https://cdn.discordapp.com/attachments/945808741385793596/1172930740476973220/Green_Minimalist_Nature_Tree_Logo.png?ex=65621be0&is=654fa6e0&hm=c88f3a24acd0886223427bb23b0d106d4edc513fba5a9f9b816d76df54a0a574&">
+                
+              <img src="https://cdn.discordapp.com/attachments/945808741385793596/1172930740476973220/Green_Minimalist_Nature_Tree_Logo.png?ex=65621be0&is=654fa6e0&hm=c88f3a24acd0886223427bb23b0d106d4edc513fba5a9f9b816d76df54a0a574&" alt="Logo AgroAID" style="max-width: 70px; max-height: 70px;">
+              
+            </a>
+            <a href="http://localhost:8080/" class="brand-logo">AgroAID</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="/chat">Chat</a></li>
+                <li><a href="/clima">Clima</a></li>
+                <li>
+                  <!-- Dropdown Trigger -->
+                  <a class='dropdown-trigger' href='#' data-target='dropdown1'>
+                      <img th:src="${avatar_url}" class="avatar" alt="foto do usuário" />
+                  </a>
+
+                  <!-- Dropdown Structure -->
+                  <ul id='dropdown1' class='dropdown-content'>
+                      <li><span th:text="${username}"></span></li>
+                      <li class="divider" tabindex="-1"></li>
+                      <li>
+                          <a href="/logout">
+                              <i class="material-icons">logout</i>
+                              sair
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="
+          color: white;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          "
+    >
+      <h1>AgroAID</h1>
+      <h2>Bem vindo ao nosso projeto </h2>
+    </div>
+   
+    <div class="containerstatic">
+
+        <div class="row" style="align-items: center; justify-content: center; display: flex;">
+            <div class="col s12 m5">
+              <div class="card">
+                <div class="card-image">
+                  <img style="width: 100%; height: 180px;"src="https://static.vecteezy.com/ti/fotos-gratis/t1/7448031-mockup-copy-space-computer-notebook-laptop-concept-a-man-s-hand-usando-a-laptop-on-internet-websites-at-the-office-keyboards-on-laptop-computer-with-balnk-copy-screen-para-seu-conteudo-publicitario-foto.jpg">
+                </div>
+                <div class="card-content">
+                  <p>Chat</p>
+                </div>
+                <div class="card-action">
+                    <a  href="/chat" class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>clique</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m5">
+              <div class="card">
+                <div class="card-image">
+                  <img style="width: 100%;" src="https://s3.static.brasilescola.uol.com.br/be/2022/09/clima.jpg">
+                </div>
+                <div class="card-content">
+                  <p>Clima</p>
+                </div>
+                <div class="card-action">
+                    <a  href="/clima" class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>clique</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.dropdown-trigger');
+      const options = {
+          constrainWidth: false,
+          coverTrigger: false
+      }
+      var instances = M.Dropdown.init(elems, options);
+  });
+</script>
+
+</html>
